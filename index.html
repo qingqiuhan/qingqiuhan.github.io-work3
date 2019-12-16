@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Something about Medical Industry in China</title>
+        <style>
+            * 
+            {box-sizing: border-box}
+            html,body{
+                width: 100%;
+                /*height: 100%;*/
+            }
+            body {margin:0;}
+
+            ul.navigation {
+                display: flex;
+                /*flex-direction: row;*/
+                /*flex-wrap: nowrap;*/
+                flex-flow: row nowrap;
+                justify-content: center;
+                /*display: table;*/
+                overflow: hidden;
+                background-color: rgb(62, 62, 62);
+                width: 100%;
+                height: auto;
+                text-align: center;
+                font-size: 0px;
+                box-shadow: 0 0 20px rgb(0, 0, 0,0.2);
+            }
+
+            ul.navigation li {
+                list-style: none;
+                background-image: none;
+                float: left;
+                font-size: 14px;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                height: 52px;
+                padding: 14px 0;
+                text-align: center;
+            }
+
+            ul.navigation li a {
+                text-decoration: none;
+                color: white;
+            }
+
+            ul.navigation a:hover{
+                background-color: rgb(129, 129, 129);
+            }
+            /*.itself{
+                border-bottom: white;
+                border-bottom-style: solid;
+                border-width: 4px;
+            }*/
+
+            
+            .title{
+                border:1px none;
+                width: 100%;
+                /*background-color: #ffc60b;*/
+                position: fixed;
+                top: 0;
+                clear: both;
+                z-index: 1;
+            }
+            .background
+            {
+                background-color: rgb(128, 128, 128,0.1);
+                width: 100%;
+                height: auto;
+                padding-bottom: 100px;
+                z-index: -1;
+            }
+            .content
+            {
+                background-color: #FFFFFF;
+                width: 60%;
+                /*height: auto;/*2119%;*/
+                height: auto;
+                padding-bottom: 30px;
+                box-shadow:0 0 20px rgb(0, 0, 0,0.2);
+                position: relative;
+                top: 50px;
+                left:50%; 
+                transform: translate(-50%,0); 
+                z-index: 0;
+            }
+            .sample1{
+                border-left-style: solid;
+                border-width: 8px;
+                border-color: #07689f;
+                font-size: 22px;
+                font-family: Arial, sans-serif;
+                margin: 30px 90px;
+                color:#07689f;
+                text-align: left;
+                padding-left: 10px;
+            }
+            .sample2{
+                margin-left:110px;
+                font-size: 16px;
+                color: rgb(0,0,0,0.75);
+                text-align: left;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+            /*.sample2-1{
+                font-size: 16px;
+                color: rgb(0,0,0,0.75);
+                text-align: center;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .sample2-2{
+                font-size: 16px;
+                color: #7EC282;
+                text-align: center;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                margin: 50px 0;
+            }*/
+            ul{
+	            list-style-type:none;
+	            padding:0px;
+	            margin:0px;
+            }
+            ul li{
+	            background-image:url(dot.svg);
+	            background-repeat:no-repeat;
+	            background-position:0px 5px; 
+	            padding-left:20px;
+            }
+            ul.case{
+                list-style-type:none;
+	            padding:0px;
+	            margin:0px;
+                position: relative;
+                left: 30px;
+            }
+            ul.case li{
+	            background-image:url(star.svg);
+	            background-repeat:no-repeat;
+	            background-position:0px 2px; 
+	            padding-left:28px;
+                margin-left: 5px;
+            }
+            ol{
+                list-style-type: number;
+            }
+            .sample3{
+                margin-left:110px;
+                margin-right: 110px;
+                font-size: 16px;
+                color: rgb(0,0,0,0.75);
+                text-align:justify;
+                /*text-justify:distribute-all-lines;*/
+                /*保证两端对齐，第三行兼容IE浏览器*/
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                line-height: 20px;
+            }
+            .try{
+                width: 14%;
+                align-content: center;
+                padding: 14px 0;
+            }
+            .number1{
+            background-color: white; position: relative; top: -20px; padding: 0; width: 100%; margin: 30px 0; 
+
+            }
+            .part1-text{
+                width: 50%; height: auto; 
+                text-align:justify;
+                margin:20px 0px; 
+                float: left; 
+                color: rgb(0,0,0,0.75);
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+        
+
+            }
+            .part2-image{
+                width: 50%; height: auto; margin:20px 0; float: left; padding: 0; 
+
+            }
+            .part1-image{
+                width: 60%; height: auto; align-content: left; margin:20px 0; float: left; padding: 0;
+
+            }
+            .part2-text{
+                width: 40%; height: auto; 
+                text-align:justify;
+                margin:20px 0px; 
+                float: left; 
+                color: rgb(0,0,0,0.75);
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+            
+            }
+
+
+        </style>
+    </head>
+    <body>
+                  
+                  
+        <div class="title">
+                <ul class="navigation">
+                    <a href="file:///Users/hanqingqiu/Desktop/cheer%20up/material/portfolio/website/work1/interface%20optimization.html" style="color: white; width: 14%; text-align: center;">
+                        <li style="width: 100%;">
+                            Interface&nbsp;Optimization
+                        </li>
+                    </a>
+                    <a href="file:///Users/hanqingqiu/Desktop/cheer%20up/material/portfolio/website/work2/interaction%20design.html" style="color: white; width: 14%; text-align: center;">
+                        <li style="width: 100%;">
+                            Interaction&nbsp;Design
+                        </li>
+                    </a>
+                    <a href="file:///Users/hanqingqiu/Desktop/cheer%20up/material/portfolio/website/work3/work3.html" style="color: white; width: 14%; text-align: center;">
+                        <li style="width: 100%; font-size: 16px;">
+                            <b>Information&nbsp;Design</b>
+                        </li>
+                    </a>
+                </ul>
+        </div>
+        <div class="background" style="text-align: center;">
+            <div class="content">
+                <img src="cover3.jpg" width="100%">
+<!--Introduction-->
+                <p style="margin: 30px 0; text-align: center; color: rgb(62, 62, 62, 0.8); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    ----Tips: This page contains many images, please wait a few seconds for loading----</p>
+                <h1 class="sample1">Introduction</h1>
+                <h2 class="sample2">Something about Medical Industry in China</h2>
+                <ul class="sample3">
+                    <li>Mentor: Fang Liu</li>
+                    <br>
+                    <li>Partner: Shuyu Lin
+                    </li>
+                    <br>
+                    <li>Reward: Second Prize of National China Computer Design Contest for Undergraduates </li>
+                </ul>
+                <br>
+                <h2 class="sample2">Why choose this topic</h2>
+                <ul class="sample3">
+                    <li>We, hot topic</li>
+                    <br>
+                    <li>My boyfriend</li>
+                    <br>
+                    <li>More object</li>
+                </ul>
+                <br>                
+                <h2 class="sample2" style="margin-top: 30px;">Structure of this work</h2>
+                <ul class="sample3">
+                    <li>Introduction</li>
+                </ul>
+                <div class="number1">
+                    <div class="part1-text">
+                        <p style="position: relative; left:130px;">blahblah</p>   
+                    </div>
+                    <div class="part2-image">
+                        <img src="3-1.jpg" width="80%" style="position: relative; left: -50px;">
+                    </div>
+               </div>
+               <div style="clear: both;">
+                        <br>
+                        <ul class="sample3">
+                            <li>Part 1
+                            </li>
+                        </ul>
+                        <div class="number1">
+                            <div class="part1-image">
+                                <img src="part1.jpg" width="80%" style="position: relative; left: 45px;" >  
+                            </div>
+                            <div class="part2-text">
+                                <p>blahblah</p>
+                            </div>
+                        </div>
+               </div>
+               <div style="clear: both;">
+                        <br>
+                        <ul class="sample3">
+                            <li>Part 2
+                            </li>
+                        </ul>
+                        <div class="number1">
+                            <div class="part2-text">
+                                <p style="position: relative; left: 130px;">blahblah</p>   
+                            </div>
+                            <div class="part1-image">
+                                <img src="part2.jpg" width="80%" style="position: relative; left: -50px;">
+                            </div>
+                        </div>
+                </div>
+                <div style="clear: both;">
+                            <br>
+                            <ul class="sample3">
+                                <li>Part 3
+                                </li>
+                            </ul>
+                            <div class="number1">
+                                <div class="part2-image">
+                                    <img src="3-6.jpg" width="80%" style="position: relative; left: 45px;">
+                                </div>
+                                <div class="part1-text">
+                                    <p style="position: relative; left: 20px;">blahblah</p>   
+                                </div>
+                            </div>
+                </div>
+                <div style="clear: both;">
+                        <br>
+                        <ul class="sample3">
+                            <li>Summary
+                            </li>
+                        </ul>
+                        <div class="number1">
+                            <div class="part1-text">
+                                <p style="position: relative; left:130px;">blahblah</p>   
+                            </div>
+                            <div class="part2-image">
+                                <img src="3-7.jpg" width="80%" style="position: relative; left: -50px;">
+                            </div>
+                       </div>
+                </div>
+            <div style="clear: both; margin-top: 20px;">
+                <h1 class="sample1">Modification process</h1>
+                <div class="number1">
+                    <div class="part1-text">
+                        <p style="position: relative; left:110px;">We modified 11 time. </p>   
+                    </div>
+                    <div class="part2-image" style="padding: 10px 0;">
+                        <img src="modify.jpg" width="70%" style="position: relative; left: -50px;">
+                    </div>
+                </div>
+            </div>
+                <div style="clear: both;">
+                    <p class="sample3">For one graph, we had tried different way to illustrate the information</p>
+                    <br>
+                    <img src="v1.jpg" width="60%" style="margin:20px 0;">
+                    <br>
+                    <img src="v2.jpg" width="60%" style="margin:20px 0;">
+                    <br>
+                    <img src="v3.jpg" width="60%" style="margin:20px 0;">
+                    <br>
+                    <img src="v4.jpg" width="60%" style="margin:20px 0;">
+                    <br>
+                    <img src="v5.jpg" width="60%" style="margin:20px 0;">
+                    <br>
+                    <br>
+                </div>
+                <div style="clear: both; margin-bottom: 60px;">
+
+                    <!--Content-->
+                                            <h1 class="sample1">Content Display</h1>
+                                            <img src="3-1.jpg" width="80%">
+                                            <img src="3-2.jpg" width="80%">
+                                            <img src="3-3.jpg" width="80%">
+                                            <img src="3-4.jpg" width="80%">
+                                            <img src="3-5.jpg" width="80%">
+                                            <img src="3-6.jpg" width="80%">
+                                            <img src="3-7.jpg" width="80%">
+                    
+                                    </div>
+            </div>
+            <p style="text-align: center;
+            font-size: 16px;
+            color:darkgrey;
+            position: relative;
+            top: 80px;
+                         line-height: 20px;">
+               Thanks for watching!
+               <br>
+               <br>
+               E-mail:qingqiuhan@gmail.com</p>
+        </div>
+       
+    </body>
+</html>
