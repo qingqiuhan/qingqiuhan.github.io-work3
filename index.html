@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Something about Medical Industry in China</title>
+        <style>
+            * 
+            {box-sizing: border-box}
+            html,body{
+                width: 100%;
+                /*height: 100%;*/
+            }
+            body {margin:0;}
+
+            ul.navigation {
+                display: flex;
+                /*flex-direction: row;*/
+                /*flex-wrap: nowrap;*/
+                flex-flow: row nowrap;
+                justify-content: center;
+                /*display: table;*/
+                overflow: hidden;
+                background-color: rgb(62, 62, 62);
+                width: 100%;
+                height: auto;
+                text-align: center;
+                font-size: 0px;
+                box-shadow: 0 0 20px rgb(0, 0, 0,0.2);
+            }
+
+            ul.navigation li {
+                list-style: none;
+                background-image: none;
+                float: left;
+                font-size: 14px;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                height: 52px;
+                padding: 14px 0;
+                text-align: center;
+            }
+
+            ul.navigation li a {
+                text-decoration: none;
+                color: white;
+            }
+
+            ul.navigation a:hover{
+                background-color: rgb(129, 129, 129);
+            }
+            /*.itself{
+                border-bottom: white;
+                border-bottom-style: solid;
+                border-width: 4px;
+            }*/
+
+            
+            .title{
+                border:1px none;
+                width: 100%;
+                /*background-color: #ffc60b;*/
+                position: fixed;
+                top: 0;
+                clear: both;
+                z-index: 1;
+            }
+            .background
+            {
+                background-color: rgb(128, 128, 128,0.1);
+                width: 100%;
+                height: auto;
+                padding-bottom: 100px;
+                z-index: -1;
+            }
+            .content
+            {
+                background-color: #FFFFFF;
+                width: 60%;
+                /*height: auto;/*2119%;*/
+                height: auto;
+                padding-bottom: 30px;
+                box-shadow:0 0 20px rgb(0, 0, 0,0.2);
+                position: relative;
+                top: 50px;
+                left:50%; 
+                transform: translate(-50%,0); 
+                z-index: 0;
+            }
+            .sample1{
+                border-left-style: solid;
+                border-width: 8px;
+                border-color: #07689f;
+                font-size: 22px;
+                font-family: Arial, sans-serif;
+                margin: 30px 90px;
+                color:#07689f;
+                text-align: left;
+                padding-left: 10px;
+            }
+            .sample2{
+                margin-left:110px;
+                font-size: 16px;
+                color: rgb(0,0,0,0.75);
+                text-align: left;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+            /*.sample2-1{
+                font-size: 16px;
+                color: rgb(0,0,0,0.75);
+                text-align: center;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .sample2-2{
+                font-size: 16px;
+                color: #7EC282;
+                text-align: center;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                margin: 50px 0;
+            }*/
+            ul{
+	            list-style-type:none;
+	            padding:0px;
+	            margin:0px;
+            }
+            ul li{
+	            background-image:url(dot.svg);
+	            background-repeat:no-repeat;
+	            background-position:0px 5px; 
+	            padding-left:20px;
+            }
+            ul.case{
+                list-style-type:none;
+	            padding:0px;
+	            margin:0px;
+                position: relative;
+                left: 30px;
+            }
+            ul.case li{
+	            background-image:url(star.svg);
+	            background-repeat:no-repeat;
+	            background-position:0px 2px; 
+	            padding-left:28px;
+                margin-left: 5px;
+            }
+            ol{
+                list-style-type: number;
+            }
+            .sample3{
+                margin-left:110px;
+                margin-right: 110px;
+                font-size: 16px;
+                color: rgb(0,0,0,0.75);
+                text-align:justify;
+                /*text-justify:distribute-all-lines;*/
+                /*保证两端对齐，第三行兼容IE浏览器*/
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                line-height: 24px;
+            }
+            .try{
+                width: 14%;
+                align-content: center;
+                padding: 14px 0;
+            }
+            .number1{
+            background-color: white; position: relative; top: -20px; padding: 0; width: 100%; margin: 30px 0; 
+
+            }
+            .part1-text{
+                width: 50%; height: auto; 
+                text-align:justify;
+                margin:20px 0px; 
+                float: left; 
+                color: rgb(0,0,0,0.75);
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+        
+
+            }
+            .part2-image{
+                width: 50%; height: auto; margin:20px 0; float: left; padding: 0; 
+
+            }
+            .part1-image{
+                width: 60%; height: auto; align-content: left; margin:20px 0; float: left; padding: 0;
+
+            }
+            .part2-text{
+                width: 40%; height: auto; 
+                text-align:justify;
+                margin:20px 0px; 
+                float: left; 
+                color: rgb(0,0,0,0.75);
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+            
+            }
+
+
+        </style>
+    </head>
+    <body>
+                  
+                  
+        <div class="title">
+                <ul class="navigation">
+                    <a href="https://qingqiuhan.github.io/qingqiuhan.github.io-work1/" style="color: white; width: 14%; text-align: center;">
+                        <li style="width: 100%;">
+                            Interface&nbsp;Optimization
+                        </li>
+                    </a>
+                    <a href="https://qingqiuhan.github.io/qingqiuhan.github.io-work2/" style="color: white; width: 14%; text-align: center;">
+                        <li style="width: 100%;">
+                            Interaction&nbsp;Design
+                        </li>
+                    </a>
+                    <a href="https://qingqiuhan.github.io/qingqiuhan.github.io-work3/" style="color: white; width: 14%; text-align: center;">
+                        <li style="width: 100%; font-size: 16px;">
+                            <b>Information&nbsp;Design</b>
+                        </li>
+                    </a>
+                </ul>
+        </div>
+        <div class="background" style="text-align: center;">
+            <div class="content">
+                <img src="cover3.jpg" width="100%">
+<!--Introduction-->
+                <p style="margin: 30px 0; text-align: center; color: rgb(62, 62, 62, 0.8); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    ----Tips: This page contains many images, please wait a few seconds for loading----</p>
+                <h1 class="sample1">Introduction</h1>
+                <h2 class="sample2">Something about Medical Industry in China</h2>
+                <ul class="sample3">
+                    <li>Mentor: Fang Liu</li>
+                    <br>
+                    <li>Partner: Shuyu Lin
+                    </li>
+                    <br>
+                    <li>Reward: Second Prize of National China Computer Design Contest for Undergraduates </li>
+                </ul>
+                <br>
+                <h2 class="sample2">Why chose this topic</h2>
+                <ul class="sample3">
+                    <li>Medical industry is always a hot topic in people’s livelihood. And at that time our health insurance policy got a big reform. This reform revoked widespread discussion. Some people supported it, some people expressed skepticism and aversion to this reform. We chose this theme and wanted to gather more comprehensive information about our medical system and resources and presented this information objectively, accurately, and vividly</li>
+                    <br>
+                    <li>My boyfriend is a medical student and Shuyu’s grandfather is a doctor. Besides, at that time there were many news reported some vicious doctor-patient conflicts. we hope our work could help the public learn more about doctors’ working environment from different perspectives</li>
+                </ul>
+                <br> 
+                <h2 class="sample2">Design Ideas</h2>
+                <ul class="sample3">
+                    <li>Goal：Select two or three questions which are relative with people’s daily life. Use these questions as a starting point to do more extensions</li>
+                    <br>
+                    <li>Illustration: Histogram, line chart, contradistinction and tendency</li>
+                    <br>
+                    <li>Style: Card layout, flat, color</li>
+                </ul>
+                <br>                
+ <!--modification-->               <h1 class="sample1">Modification process</h1>
+                <p class="sample3" style="line-height:25px;">To illustrate and present information better, we made a great effort to this work. Take the fourth section of part 2 as an example. In this section, we try to present the information that in 2017, statistics show that 42% of outpatients and 77% of inpatients chose to go to hospitals for treatment, and the number of hospitals accounted for only 3% of the total number of medical & health institutions.  The main point in this information is the huge contrast between these numbers. It seemed like this information was not complex, but illustrate this contrast clearly was a big challenge. We made 3 versions, tried different graphs and methods, and it was apparent that the last version had the best effect.</p>
+                <br>
+                <img src="v1.jpg" width="60%" style="margin:20px 0;">
+                <p class="sample3" style="text-align: center;">Only 3% and 42% are showed in the picture, no contrast, no more information</p>
+                <br>
+                <img src="v3.jpg" width="60%" style="margin:20px 0;">
+                <p class="sample3" style="text-align: center;">This version is better, but there is not significant difference between three rectangles, which represent medical & health institutions, inpatients and outpatients respectively</p>
+                <br>
+                <img src="v5.jpg" width="60%" style="margin:20px 0;">
+                <p class="sample3" style="text-align: center;">Comprehensive information, different traits for different types of statistics and  distinct contrast, this version is the best! </p>
+          
+ <!--structure-->               <h2 class="sample1" style="margin-top: 30px;">Structure of this work</h2>
+                <h2 class="sample2">
+                    Introduction
+                </h2>
+            
+                        <p class="sample3" >In this part. We briefly introduce the content and purpose of this work by coming up three questions. They are “Is it expensive for us to see a doctor today?”, “Is it convenient for us to get medical treatment in today society?” and “Are our doctors tired?”. The summary question is “Do you satisfied with our medical resources?”
+                        </p>   
+                        <img src="3-1.jpg" width="60%" style=" margin:30px 0;">
+                    
+                        <br>
+                        <h2 class="sample2" style="margin-top: 30px; margin-bottom:30px;">
+                            Part 1
+                            
+                        </h2>
+                                <p class="sample3" >The topic of part 1 is “Is it expensive for us to see a doctor?” This part answers this question from five perspectives. They are outpatient cost per capita and hospital expenses per capita from 2014 to 2018, outpatient cost per capita and hospital expenses per capita in China and other three countries in 2017, the ratio of medical expenditure per capita to disposable income per capita of these four countries in 2017, and our medical insurance system.</p>
+                                <div style="background-color: white; padding: 0px; style=" margin:30px 0;"">
+                                    <div style="width: 50%; height: auto; text-align: right; margin:20px 0px; float: left;">
+                                        <img src="3-2.jpg" width="82%">
+                                    </div>
+                                    <div style="width: 50%; height: auto; text-align: left; margin:20px 0px; float: left; ">
+                                        <img src="3-3.jpg" width="82%">
+                                    </div>
+                                </div>
+                        <br>
+                        <br>
+                        <h2 class="sample3" style="margin-bottom: 30px; margin-top: 60px; clear: both;">
+                            <br>
+                            Part 2
+                            
+                        </h2>
+                                <p class="sample3">Part 2 consists of five sections. The number of medical and health personnel, the number of medical and health institutions and the number of patients from 2014 to 2017, the distribution of patients in medical health institutions and the distribution of medical and health institutions in 2017. We try to use these sections to answer “Is it inconvenient for us to get treatment?”</p>   
+                                <div style="background-color: white; padding: 0px;" style=" margin:30px 0;">
+                                    <div style="width: 50%; height: auto; text-align: right; margin:20px 0px; float: left;">
+                                        <img src="3-4.jpg" width="82%">
+                                    </div>
+                                    <div style="width: 50%; height: auto; text-align: left; margin:20px 0px; float: left; ">
+                                        <img src="3-5.jpg" width="82%">
+                                    </div>
+                                </div>
+                            <br>
+                            <br>
+                            <h2 class="sample3" style="margin-bottom: 30px; margin-top: 60px; clear: both;">
+                                <br>
+                                Part 3
+                                
+                            </h2>
+                                    <p class="sample3" >This part describes the doctors’ working environment by showing four kinds of statistics. They are doctors’ health, working hour, conflicts with patients and salary. We want to use these statistics to answer the question-"are doctors tired?”</p>   
+                                    <img src="3-6.jpg" width="60%" style="margin: 20px 0">
+                        <h2 class="sample3" style="margin-bottom: 30px; margin-top: 30px;">
+                            Summary
+                            
+                        </h2>
+                                <p class="sample3" >In this section, we briefly summarize the current situation of medical industry in China and call on that everyone could take a rational view of the current situation.</p>   
+                                <img src="3-7.jpg" width="60%" style=" margin:30px 0;">
+                    <br>
+                    <br>                
+            </div>
+            <p style="text-align: center;
+            font-size: 16px;
+            color:darkgrey;
+            position: relative;
+            top: 80px;
+                         line-height: 20px;">
+               Thanks for watching!
+               <br>
+               <br>
+               E-mail:qingqiuhan@gmail.com</p>
+        </div>
+       
+    </body>
+</html>
